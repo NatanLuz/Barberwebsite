@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sobre — Barbearia Luxo</title>
+    <meta name="description" content="Nossa história, equipe e diferenciais. Conheça a Barbearia Luxo." />
+    <!-- SEO Social -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Sobre — Barbearia Luxo" />
+    <meta property="og:description" content="Nossa história, equipe e diferenciais. Conheça a Barbearia Luxo." />
+    <meta property="og:image" content="img/barbeariainterior.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="canonical" href="/sobre.html" />
+    <link rel="manifest" href="manifest.json" />
+
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar container">
+        <a class="logo" href="index.html">Barbearia <span>Luxo</span></a>
+        <button class="menu-btn" aria-expanded="false" aria-controls="nav-links" aria-label="Abrir menu">
+          <span></span><span></span><span></span>
+        </button>
+        <ul id="nav-links" class="nav-links">
+          <li><a href="index.html">Início</a></li>
+          <li><a class="active" href="sobre.html" aria-current="page">Sobre</a></li>
+          <li><a href="servicos.html">Serviços</a></li>
+          <li><a class="btn btn--sm" href="contato.html">Agendar</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="subhero">
+        <div class="container" data-animate>
+          <h1 class="subhero__title">Sobre Nós</h1>
+          <p class="subhero__subtitle">Décadas de tradição com olhar contemporâneo.</p>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="historia-titulo">
+        <div class="container grid grid--2" data-animate>
+          <div>
+            <h2 id="historia-titulo" class="section__title">Nossa História</h2>
+            <p>Desde 2015, a Barbearia Luxo oferece uma experiência completa em cuidados masculinos. Unimos técnica, criatividade e hospitalidade para que cada visita seja memorável.</p>
+            <p>Investimos continuamente em formação e produtos de alta performance para entregar um padrão premium em todos os detalhes.</p>
+          </div>
+          <div class="media-card">
+            <!-- Ajuste de caminho e arquivo existente -->
+            <img src="img/barbeariainterior.jpg" alt="Interior da Barbearia Luxo" />
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="equipe-titulo">
+        <div class="container">
+          <header class="section__header" data-animate>
+            <h2 id="equipe-titulo" class="section__title">Nossa Equipe</h2>
+            <p class="section__subtitle">Profissionais certificados e apaixonados pelo que fazem.</p>
+          </header>
+          <div class="grid grid--3" data-animate>
+            <article class="person person--compact">
+              <h3>João Silva</h3>
+              <p>Especialista em cortes clássicos e finalização com tesoura.</p>
+            </article>
+            <article class="person person--compact">
+              <h3>Lucas Pereira</h3>
+              <p>Focado em tendências modernas e design de barba com navalha.</p>
+            </article>
+            <article class="person person--compact">
+              <h3>Ana Costa</h3>
+              <p>Experiência Premium: cuidados de pele, barba e consultoria de estilo.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section features" aria-labelledby="diferenciais-titulo">
+        <div class="container">
+          <header class="section__header" data-animate>
+            <h2 id="diferenciais-titulo" class="section__title">Diferenciais</h2>
+          </header>
+          <div class="grid grid--3 features__grid" data-animate>
+            <div class="feature"><div class="feature__icon">🕰️</div><h3 class="feature__title">Pontualidade</h3><p class="feature__text">Agendamentos com horários respeitados.</p></div>
+            <div class="feature"><div class="feature__icon">☕</div><h3 class="feature__title">Conveniência</h3><p class="feature__text">Café, água e comodidades durante sua espera.</p></div>
+            <div class="feature"><div class="feature__icon">🧴</div><h3 class="feature__title">Cuidados completos</h3><p class="feature__text">Rituais com toalha quente e produtos de alto padrão.</p></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__grid">
+        <div class="footer__col">
+          <a class="logo logo--footer" href="index.html">Barbearia <span>Luxo</span></a>
+          <p>Rua Exemplo, 123 — Centro, Sua Cidade</p>
+        </div>
+        <div class="footer__col">
+          <h4>Navegação</h4>
+          <ul>
+            <li><a href="servicos.html">Serviços</a></li>
+            <li><a href="contato.html">Contato</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="container">
+          <p>© 2025 Barbearia Luxo. Todos os direitos reservados. • By Natan DEV</p>
+        </div>
+      </div>
+    </footer>
+
+    <script defer src="Main.js"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('sw.js');
+        });
+      }
+    </script>
+  </body>
+  </html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Serviços — Barbearia Luxo</title>
+    <meta name="description" content="Lista de serviços e preços: corte, barba e combos especiais." />
+    <!-- Social -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Serviços — Barbearia Luxo" />
+    <meta property="og:description" content="Lista de serviços e preços: corte, barba e combos especiais." />
+    <meta property="og:image" content="img/Clienterecebendocorteebarba.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+   <link rel="stylesheet" href="style.css" />
+   <link rel="canonical" href="/servicos.html" />
+   <link rel="manifest" href="manifest.json" />
+
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar container">
+        <a class="logo" href="index.html">Barbearia <span>Luxo</span></a>
+        <button class="menu-btn" aria-expanded="false" aria-controls="nav-links" aria-label="Abrir menu">
+          <span></span><span></span><span></span>
+        </button>
+        <ul id="nav-links" class="nav-links">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a class="active" href="servicos.html">Serviços</a></li>
+          <li><a class="btn btn--sm" href="contato.html">Agendar</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="subhero">
+        <div class="container" data-animate>
+          <h1 class="subhero__title">Serviços e Preços</h1>
+          <p class="subhero__subtitle">Transparência e qualidade em cada atendimento.</p>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="lista-servicos">
+        <div class="container">
+          <h2 id="lista-servicos" class="section__title" data-animate>Serviços</h2>
+          <div class="grid grid--3" data-animate>
+            <article id="corte" class="price-card">
+              <!-- Ajuste de caminho da imagem para diretório existente -->
+              <img class="price-card__img price-card__img--corte" src="img/sessaoserviçosCortedecabelomasculino.jpg" alt="Corte de Cabelo" loading="lazy" decoding="async" />
+              <h3 class="price-card__title">Corte de Cabelo</h3>
+              <p class="price-card__desc">Consultoria + lavagem + finalização</p>
+              <div class="price-card__price">R$ 70</div>
+              <a class="btn btn--block" href="contato.html?servico=corte">Agendar</a>
+            </article>
+            <article id="barba" class="price-card">
+              <!-- caminho da imagem para diretório existente -->
+              <img class="price-card__img" src="img/Aparoedesenhodebarbacomnavalha.jpg" alt="Barba" loading="lazy" decoding="async" />
+              <h3 class="price-card__title">Barba</h3>
+              <p class="price-card__desc">Modelagem + Toalha Quente + balm</p>
+              <div class="price-card__price">R$ 55</div>
+              <a class="btn btn--block" href="contato.html?servico=barba">Agendar</a>
+            </article>
+            <article id="combo" class="price-card price-card--featured">
+              <!-- caminho da imagem para diretório existente -->
+              <img class="price-card__img" src="img/Clienterecebendocorteebarba.jpg" alt="Combo Luxo (Corte + Barba)" loading="lazy" decoding="async" />
+              <div class="price-card__badge">Mais Escolhido</div>
+              <h3 class="price-card__title">Combo Luxo</h3>
+              <p class="price-card__desc">Corte + Barba com ritual completo</p>
+              <div class="price-card__price">R$ 110</div>
+              <a class="btn btn--block" href="contato.html?servico=combo">Agendar</a>
+            </article>
+          </div>
+          <p class="muted" data-animate>Valores sujeitos a Atualização. Consulte pacotes corporativos.</p>
+        </div>
+      </section>
+
+      
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__grid">
+        <div class="footer__col">
+          <a class="logo logo--footer" href="index.html">Barbearia <span>Luxo</span></a>
+          <p>Rua Exemplo, 123 — Centro, Sua Cidade</p>
+        </div>
+        <div class="footer__col">
+          <h4>Navegação</h4>
+          <ul>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="contato.html">Contato</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="container">
+          <p>© 2025 Barbearia Luxo. Todos os direitos reservados. • By Natan DEV</p>
+        </div>
+      </div>
+    </footer>
+    <script defer src="Main.js"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('sw.js');
+        });
+      }
+    </script>
+  </body>
+  </html>

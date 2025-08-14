@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contato e Agendamento — Barbearia Luxo</title>
+    <meta name="description" content="Fale conosco e agende seu horário. Veja nossa localização no mapa." />
+    <!-- SEO Social -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Contato e Agendamento — Barbearia Luxo" />
+    <meta property="og:description" content="Fale conosco e agende seu horário. Veja nossa localização no mapa." />
+    <meta property="og:image" content="img/Clienterecebendocorteebarba.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="canonical" href="/contato.html" />
+    <link rel="manifest" href="manifest.json" />
+
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar container">
+        <a class="logo" href="index.html">Barbearia <span>Luxo</span></a>
+        <button class="menu-btn" aria-expanded="false" aria-controls="nav-links" aria-label="Abrir menu">
+          <span></span><span></span><span></span>
+        </button>
+        <ul id="nav-links" class="nav-links">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="servicos.html">Serviços</a></li>
+          <li><a class="active btn btn--sm" href="contato.html" aria-current="page">Agendar</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="subhero">
+        <div class="container" data-animate>
+          <h1 class="subhero__title">Contato e Agendamento</h1>
+          <p class="subhero__subtitle">Preencha seus dados e retornaremos a confirmação.</p>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="form-titulo">
+        <div class="container grid grid--2 contact-grid" data-animate>
+          <div>
+            <h2 id="form-titulo" class="section__title">Agende seu horário</h2>
+            <form id="contactForm" class="form" novalidate>
+              <div class="form__row">
+                <label for="name">Nome</label>
+                <input id="name" name="name" type="text" placeholder="Seu nome" autocomplete="name" required />
+                <small class="error" data-error-for="name"></small>
+              </div>
+              <div class="form__row">
+                <label for="phone">Telefone</label>
+                <input id="phone" name="phone" type="tel" placeholder="(00) 00000-0000" inputmode="tel" autocomplete="tel" pattern="\\(??)?\s?\d{4,5}-?\d{4}" required />
+                <small class="error" data-error-for="phone"></small>
+              </div>
+              <div class="form__row">
+                <label for="email">E-mail</label>
+                <input id="email" name="email" type="email" placeholder="voce@email.com" autocomplete="email" required />
+                <small class="error" data-error-for="email"></small>
+              </div>
+              <div class="form__row">
+                <label for="service">Serviço</label>
+                <select id="service" name="service" required>
+                  <option value="">Selecione</option>
+                  <option value="corte">Corte de Cabelo</option>
+                  <option value="barba">Barba</option>
+                  <option value="combo">Combo Luxo</option>
+                </select>
+                <small class="error" data-error-for="service"></small>
+              </div>
+              <div class="form__grid">
+                <div class="form__row">
+                  <label for="date">Data</label>
+                  <input id="date" name="date" type="date" required />
+                  <small class="error" data-error-for="date"></small>
+                </div>
+                <div class="form__row">
+                  <label for="time">Horário</label>
+                  <input id="time" name="time" type="time" required />
+                  <small class="error" data-error-for="time"></small>
+                </div>
+              </div>
+              <div class="form__row">
+                <label for="msg">Mensagem (opcional)</label>
+                <textarea id="msg" name="msg" rows="4" placeholder="Observações..."></textarea>
+              </div>
+              <button type="submit" class="btn btn--block">Enviar</button>
+              
+              <p id="formSuccess" class="form__success" role="status" aria-live="polite" hidden>
+                Recebemos seu pedido! Em breve entraremos em contato para confirmar.
+              </p>
+            </form>
+          </div>
+          <div class="contact-info">
+            <div class="contact-card">
+              <h3>Informações</h3>
+              <ul>
+                <li>Telefone: <a href="tel:+550000000000">(00) 0000-0000</a></li>
+                <li>E-mail: <a href="mailto:contato@barbearialuxo.com">contato@barbearialuxo.com</a></li>
+                <li>Endereço: Rua Exemplo, 123 — Centro</li>
+                <li>Horário: Seg a Sáb, 09h às 20h</li>
+              </ul>
+            </div>
+            <div class="map-card">
+              <iframe
+                title="Mapa da Barbearia Luxo"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.469899987811!2d-46.655981!3d-23.585582!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDM1JzA4LjEiUyA0NsKwMzknMjEuNSJX!5e0!3m2!1spt-BR!2sBR!4v1700000000000"
+                width="100%"
+                height="320"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__grid">
+        <div class="footer__col">
+          <a class="logo logo--footer" href="index.html">Barbearia <span>Luxo</span></a>
+          <p>Rua A, 123 — Centro, Sua Cidade</p>
+        </div>
+        <div class="footer__col">
+          <h4>Navegação</h4>
+          <ul>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="servicos.html">Serviços</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="container">
+          <p>© 2025 Barbearia Luxo. Todos os direitos reservados. • By Natan DEV</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Ajuste caminho do script para arquivo real -->
+    <script defer src="Main.js"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('sw.js');
+        });
+      }
+    </script>
+  </body>
+  </html>
+
