@@ -1,4 +1,4 @@
-## Barbearia Luxo — Premium Barber Website
+ ## Barbearia Luxo — Premium Barber Website ##PROTOTYPE WEBSITE##
 
 An elegant, performance‑oriented, and fully responsive website for a premium barber shop. Built with accessible HTML, modern CSS, and light vanilla JavaScript, focusing on conversion, SEO, and a polished UX.
 
