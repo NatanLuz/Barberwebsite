@@ -1,85 +1,88 @@
- ## Barbearia Luxo — Premium Barber Website ##PROTOTYPE WEBSITE##
+## Barbearia Luxo — Site Premium
 
- [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)]()
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)]()
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)]()
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)]()
 [![Google Fonts](https://img.shields.io/badge/Google_Fonts-4285F4?style=flat&logo=google&logoColor=white)]()
 
-
 ![Barbearia Luxo](https://i.imgur.com/UirkYbC.png)
 
-An elegant, performance‑oriented, and fully responsive website for a premium barber shop. Built with accessible HTML, modern CSS, and light vanilla JavaScript, focusing on conversion, SEO, and a polished UX.
+Site moderno, leve e totalmente responsivo para uma barbearia premium. Construído com HTML acessível, CSS moderno e JavaScript puro, focando em conversão, SEO, PWA e uma experiência de usuário refinada.
 
-### What’s inside
-- Landing page with hero, highlights, services, and CTA
-- About page with story, team, and differentiators
-- Services page with clear pricing and booking CTA
-- Contact and booking page with inline validation and map
-- Reusable components (cards, features, forms, grid)
-- Smooth on‑scroll reveal and mobile navigation
-- SEO (Open Graph, Twitter Cards, canonical), JSON‑LD (HairSalon)
-- PWA baseline: manifest + Service Worker (offline cache)
+### O que o projeto entrega
 
-### Highlights
-- Professional dark theme with premium accent color
-- Mobile‑first grid and modern layout primitives
-- Accessible: skip link, ARIA states, keyboard handling
-- Fast: minimal JS, optimized animations, preconnects
+- Arquitetura de página única (SPA) em `index.html` com:
+  - Hero de destaque com CTA para agendamento
+  - Seções de destaques, serviços, preços, depoimentos, FAQ, dicas (blog) e contato
+- Navegação mobile com menu hambúrguer acessível
+- Formulário de agendamento com validação e salvamento local (localStorage)
+- SEO configurado (Open Graph, Twitter Cards, canonical, meta description)
+- Dados estruturados JSON‑LD (`HairSalon` + `AggregateRating` + `FAQPage`)
+- PWA básico: `manifest.json` + `sw.js` + `offline.html` para navegação offline
 
-### Tech Stack
-- HTML5, CSS3 (custom properties, responsive grid)
-- Vanilla JS (navigation, form validation, a11y helpers)
+### Principais destaques
+
+- Tema escuro profissional com cor de destaque dourada
+- Layout responsivo mobile‑first usando grid moderno
+- Acessibilidade: skip link, foco visível, ARIA em navegação e formulário
+- Microinterações suaves em cards, botões e scroll (Intersection Observer)
+- Botão flutuante de agendamento em telas menores
+
+### Stack utilizada
+
+- HTML5 semântico
+- CSS3 com variáveis (`:root`), grid responsivo e componentes reutilizáveis
+- JavaScript puro para navegação, animações e formulário
 - Google Fonts (Inter, Playfair Display)
 
-### Getting Started
-1) Clone the repo
-2) Open `index.html` in your browser
+### Como rodar o projeto
 
-For a local server (recommended):
+1. Clone o repositório
+2. Abra o arquivo `index.html` em qualquer navegador moderno
+
+Recomendado usar um servidor local (para testar melhor o PWA):
+
 ```bash
-# Using VS Code
+# VS Code com extensão Live Server
 code .
-# Run with Live Server extension
 
-# Or with Python
+# Ou com Python 3
 python -m http.server 8080
 ```
 
-### Project Structure
+Depois acesse: `http://localhost:8080/index.html`
+
+### Estrutura do projeto
+
 ```
-barbeirowebsite/
-  index.html
-  sobre.html
-  servicos.html
-  contato.html
-  style.css
-  Main.js
-  img/
-  manifest.json
-  sw.js
-  sitemap.xml
-  robots.txt
+Barberwebsite/
+  index.html      # Página única com todas as seções
+  style.css       # Estilos globais e componentes
+  Main.js         # Navegação mobile, animações e formulário
+  manifest.json   # Manifesto PWA
+  sw.js           # Service Worker (cache estático + offline)
+  offline.html    # Tela mostrada quando o usuário está offline
+  img/            # Imagens do site
+  README.md
 ```
 
-### Customization
-- Branding: update logo text and primary color in `:root` variables (style.css)
-- Contact data: update phone/email/address in `contato.html` and JSON‑LD in `index.html`
-- Prices and services: edit cards in `servicos.html`
-- Images: replace assets inside `img/` (prefer WebP/AVIF)
+### Como personalizar
 
-### SEO & PWA Notes
-- Keep canonical links per page, and update `sitemap.xml`
-- Host over HTTPS for Service Worker and PWA install prompts
-- Replace the manifest icon with a proper 512×512 PNG/SVG
+- **Marca**: altere o texto do logo e as cores em `:root` no `style.css`
+- **Conteúdo**: edite textos das seções diretamente em `index.html`
+- **Serviços e preços**: ajuste os cards na seção "Serviços" e "Serviços e preços" em `index.html`
+- **Contato**: atualize telefone, e‑mail, endereço e horários no bloco de contato em `index.html`
+- **Imagens**: substitua os arquivos em `img/` (ideal usar formatos otimizados como WebP/AVIF)
 
-### Roadmap (nice‑to‑have)
-- FAQ section with Schema.org `FAQPage`
-- Testimonials with `Review` schema
-- Image `<picture>` sources (WebP/AVIF) + width/height attributes
-- Content Security Policy and CSP‑safe inline handling
+### Notas de SEO & PWA
 
-### Credits
-Design and development by Natan Da Luz.
+- Hospede o projeto em HTTPS para o Service Worker funcionar corretamente
+- Atualize o título, descrição e imagem de compartilhamento em `index.html` para sua marca
+- Substitua os ícones do `manifest.json` por ícones próprios da barbearia (512×512, 192×192, etc.)
 
-LinkedIn: https://www.linkedin.com/in/natan-da-luz-3156582a2/
-Email: natandaluz01@gmail.com
+### Créditos
+
+Design e desenvolvimento por **Natan Da Luz**.
+
+- LinkedIn: https://www.linkedin.com/in/natan-da-luz-3156582a2/
+- E‑mail: natandaluz01@gmail.com
