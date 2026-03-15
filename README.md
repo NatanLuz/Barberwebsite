@@ -7,7 +7,7 @@
 
 ![Barbearia Luxo](https://i.imgur.com/UirkYbC.png)
 
-Site moderno, leve e totalmente responsivo para uma barbearia premium. Construído com HTML acessível, CSS moderno e JavaScript puro, focando em conversão, SEO, PWA e uma experiência de usuário refinada.
+Site moderno, leve e totalmente responsivo para uma barbearia premium. Construído com HTML acessível, CSS moderno e JavaScript puro, focando em conversão, SEO, PWA e uma experiência de usuário refinada limpa
 
 ### O que o projeto entrega
 
